@@ -1,0 +1,6 @@
+framework module Pods_MentionsEmotionsLinksUITests {
+  umbrella header "Pods-MentionsEmotionsLinksUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
