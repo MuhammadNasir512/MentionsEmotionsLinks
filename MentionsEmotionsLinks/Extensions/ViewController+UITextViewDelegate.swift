@@ -15,9 +15,15 @@ extension ViewController: UITextViewDelegate {
         heightConstraint.constant = textView.intrinsicContentSize.height
     }
     
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        textView.text = ""
+    }
+    
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if (text == "\n") {
             textView.resignFirstResponder()
+            userDidFinishEnteringText(textView.text)
+            textView.text = Constants.defaultTextForInputTextView
             return false
         }
         return true

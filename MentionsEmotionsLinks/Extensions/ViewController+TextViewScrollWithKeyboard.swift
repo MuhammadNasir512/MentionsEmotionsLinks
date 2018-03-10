@@ -12,12 +12,10 @@ extension ViewController {
     
     @objc func keyboardWillShow(notification: NSNotification) {
         scrollTextView(appearing: true, notification: notification)
-        textView?.text = ""
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
         scrollTextView(appearing: false, notification: notification)
-        textView?.text = Constants.defaultTextInputTextView
     }
     
     func scrollTextView(appearing:Bool, notification:NSNotification) {
