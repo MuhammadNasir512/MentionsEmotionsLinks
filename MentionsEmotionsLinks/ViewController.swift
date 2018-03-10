@@ -8,16 +8,15 @@
 
 import UIKit
 
-struct Constants {
-    static let defaultTextForInputTextView = "Please enter text here."
-}
-
 class ViewController: UIViewController {
 
-    @IBOutlet weak var bottomConstraint: NSLayoutConstraint?
-    @IBOutlet weak var heightConstraint: NSLayoutConstraint?
-    @IBOutlet weak var textView: UITextView?
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var textViewForInput: UITextView!
+    @IBOutlet weak var textViewForOutput: UITextView!
+
     var inputProcessorType: InputProcessorType?
+    var jsonUtility = JSONUtility()
     
     var originalBottomConstant: CGFloat = 0
 
@@ -32,13 +31,25 @@ class ViewController: UIViewController {
         super.viewWillDisappear(animated)
     }
     
+    private func setupTextView() {
+        textViewForInput.text = Constants.defaultTextForInputTextView
+        textViewForOutput.text = Constants.defaultTextForOutputTextView
+        heightConstraint.constant = textViewForInput.intrinsicContentSize.height
+        originalBottomConstant = bottomConstraint.constant
+    }
+    
+    func userDidStartEnteringText() {
+        textViewForOutput.text = Constants.defaultTextForOutputTextView
+    }
+    
     func userDidFinishEnteringText(_ text: String) {
         processInput(text)
     }
     
     private func processInput(_ text: String) {
         let mentions = processMentions(text)
-        print("Mentions:\(mentions)")
+        let jsonFormattedString = jsonUtility.JsonFormattedString(withArray: mentions)
+        updateOutputTextView(withJsonFormattedText: jsonFormattedString, originalText: text)
     }
     
     private func processMentions(_ text: String) -> [String] {
@@ -47,15 +58,19 @@ class ViewController: UIViewController {
         return inputProcessorType.processText()
     }
 
-    private func setupTextView() {
-        guard let textView = textView else { return }
-        textView.text = Constants.defaultTextForInputTextView
+    private func updateOutputTextView(withJsonFormattedText jsonFormattedText: String, originalText: String) {
+        if (originalText.count == 0) {
+            textViewForOutput.text = Constants.noInputTextMessageForOutputTextView
+            return
+        }
 
-        guard
-            let heightConstraint = heightConstraint,
-            let bottomConstraint = bottomConstraint
-            else { return }
-        heightConstraint.constant = textView.intrinsicContentSize.height
-        originalBottomConstant = bottomConstraint.constant
+        let string = "\(Constants.inputValueHeadingForOutputTextView) \(originalText)\n\n"
+        if (jsonFormattedText.count == 0) {
+            textViewForOutput.text = "\(string)\(Constants.noSpecialStringForOutputTextView)"
+            return
+        }
+        textViewForOutput.text = "\(string)\(jsonFormattedText)"
     }
 }
+
+
