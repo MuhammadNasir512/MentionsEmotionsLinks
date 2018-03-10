@@ -54,8 +54,12 @@ class ViewController: UIViewController {
     
     private func processMentions(_ text: String) -> [String] {
         inputProcessorType = MentionsProcessor(withText: text) as MentionsProcessor
-        guard let inputProcessorType = inputProcessorType else { return [] }
-        return inputProcessorType.processText()
+        guard
+            let inputProcessorType = inputProcessorType,
+            let mentionsArray = inputProcessorType.processData() as? [String]
+            else { return [] }
+        
+        return mentionsArray
     }
 
     private func updateOutputTextView(withJsonFormattedText jsonFormattedText: String, originalText: String) {

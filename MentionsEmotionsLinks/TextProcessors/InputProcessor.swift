@@ -16,7 +16,7 @@ class InputProcessor: NSObject, InputProcessorType {
         super.init()
     }
     
-    func processText() -> [String] {
+    func processData() -> [Any] {
         return ["InputProcessor"]
     }
 }
