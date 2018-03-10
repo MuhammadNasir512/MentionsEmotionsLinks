@@ -44,4 +44,30 @@ extension MentionsEmotionsLinksType {
         let element = MentionsEmotionsLinksUIElements.keyboardReturnButton
         element.tap()
     }
+    
+    func typeTextInInputTextView(_ text: String) {
+        let element = MentionsEmotionsLinksUIElements.inputTextField
+        element.typeText(text)
+    }
+    
+    func expectThatOutputFieldShowsInputNotProvided(_ originalText: String) {
+        let expectedValue = "\(Constants.noInputTextMessageForOutputTextView)"
+        
+        let actualValue = MentionsEmotionsLinksUIElements.outputTextField.value as? String
+        XCTAssert(actualValue == expectedValue)
+    }
+    
+    func expectThatOutputFieldShowsNothingUsefulFound(_ originalText: String) {
+        let expectedValue = "\(Constants.inputValueHeadingForOutputTextView) \(originalText)\n\n\(Constants.noSpecialStringForOutputTextView)"
+        
+        let actualValue = MentionsEmotionsLinksUIElements.outputTextField.value as? String
+        XCTAssert(actualValue == expectedValue)
+    }
+    
+    func expectThatOutputFieldShowsMentionsFound(_ originalText: String) {
+        let expectedValue = "Input: @chris you around? and how are @mike, @bob, @kate, @sam are doing\n\n{\n  \"mentions\" : [\n    \"chris\",\n    \"mike\",\n    \"bob\",\n    \"kate\",\n    \"sam\"\n  ]\n}"
+        
+        let actualValue = MentionsEmotionsLinksUIElements.outputTextField.value as? String
+        XCTAssert(actualValue == expectedValue)
+    }
 }

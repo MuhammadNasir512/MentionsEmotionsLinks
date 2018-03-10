@@ -40,7 +40,6 @@
                                 <rect key="frame" x="20" y="84" width="335" height="503"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" identifier="output_text_field"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textView>
@@ -61,7 +60,8 @@
                     <connections>
                         <outlet property="bottomConstraint" destination="VKa-mG-x5h" id="1CZ-62-D19"/>
                         <outlet property="heightConstraint" destination="CtS-Gh-3l6" id="PNG-3A-3pr"/>
-                        <outlet property="textView" destination="pPj-cf-8ab" id="K1z-fP-hOP"/>
+                        <outlet property="textViewForInput" destination="pPj-cf-8ab" id="FJA-wr-DOn"/>
+                        <outlet property="textViewForOutput" destination="QKB-HP-B73" id="Xlh-j1-U2q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

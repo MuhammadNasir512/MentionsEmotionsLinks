@@ -11,5 +11,8 @@ protocol MentionsEmotionsLinksType {
     func testMainViewHasInputTextView()
     func testMainViewHasOutputTextView()
     func testKeyboardShowsAndHidesWithUserInteractions()
+    func testWhenUserHaveEnteredNothinThenProperMessageShowsInOutputTextView()
+    func testWhenUserHaveEnteredPlainTextThenProperMessageShowsInOutputTextView()
+    func testWhenUserHaveEnteredAnyMentionsThenItShownInOutputTextView()
 }
 
