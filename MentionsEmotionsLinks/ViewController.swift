@@ -8,18 +8,37 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+struct Constants {
+    static let defaultTextInputTextView = "Please enter text here."
 }
 
+class ViewController: UIViewController {
+
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint?
+    @IBOutlet weak var heightConstraint: NSLayoutConstraint?
+    @IBOutlet weak var textView: UITextView?
+    
+    var originalBottomConstant: CGFloat = 0
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setupTextView()
+        registerKeyboardNotifications()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        unregisterKeyboardNotifications()
+        super.viewWillDisappear(animated)
+    }
+    
+    private func setupTextView() {
+        guard
+            let heightConstraint = heightConstraint,
+            let bottomConstraint = bottomConstraint,
+            let textView = textView
+            else { return }
+        heightConstraint.constant = textView.intrinsicContentSize.height
+        originalBottomConstant = bottomConstraint.constant
+        textView.text = Constants.defaultTextInputTextView
+    }
+}
