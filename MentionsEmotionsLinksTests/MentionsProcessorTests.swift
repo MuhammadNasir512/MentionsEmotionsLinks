@@ -23,27 +23,27 @@ class MentionsProcessorTests: XCTestCase {
     
     func testWhenEmptyStringProvided_thenItReturnsEmptyArray() {
         let mentionsProcessor = MentionsProcessor(withText: "")
-        let resultUnderTest = mentionsProcessor.processText()
+        let resultUnderTest = mentionsProcessor.processData()
         XCTAssertNotNil(resultUnderTest)
         XCTAssertTrue(resultUnderTest.count == 0)
     }
     
     func testWhenStringWithoutMentionsIsProvided_thenItReturnsEmptyArray() {
         let mentionsProcessor = MentionsProcessor(withText: "test String www.google.com (aww)")
-        let resultUnderTest = mentionsProcessor.processText()
+        let resultUnderTest = mentionsProcessor.processData()
         XCTAssertNotNil(resultUnderTest)
         XCTAssertTrue(resultUnderTest.count == 0)
     }
     
     func testWhenStringWithMentionsIsProvided_thenItReturnsNonEmptyArray() {
         let mentionsProcessor = MentionsProcessor(withText: "@chris you around?")
-        var resultUnderTest = mentionsProcessor.processText()
+        var resultUnderTest = mentionsProcessor.processData() as! [String]
         XCTAssertNotNil(resultUnderTest)
         XCTAssertTrue(resultUnderTest.count == 1)
         XCTAssertTrue(resultUnderTest[0] == "chris")
         
         mentionsProcessor.text = "@chris you around? and how are @mike, @bob, @kate, @sam are doing"
-        resultUnderTest = mentionsProcessor.processText()
+        resultUnderTest = mentionsProcessor.processData() as! [String]
         XCTAssertTrue(resultUnderTest.count == 5)
         XCTAssertTrue(resultUnderTest.contains("chris"))
         XCTAssertTrue(resultUnderTest.contains("mike"))

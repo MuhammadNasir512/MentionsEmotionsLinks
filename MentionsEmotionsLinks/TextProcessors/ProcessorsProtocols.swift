@@ -9,7 +9,7 @@
 import Foundation
 
 protocol InputProcessorType {
-    func processText() -> [String]
+    func processData() -> [Any]
 }
 
 protocol TextProcessorType: InputProcessorType {
