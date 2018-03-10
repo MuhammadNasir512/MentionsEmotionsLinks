@@ -14,6 +14,15 @@
 		0287514220533E310038EA13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0287514020533E310038EA13 /* LaunchScreen.storyboard */; };
 		0287514D20533E310038EA13 /* MentionsEmotionsLinksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0287514C20533E310038EA13 /* MentionsEmotionsLinksTests.swift */; };
 		0287515820533E310038EA13 /* MentionsEmotionsLinksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0287515720533E310038EA13 /* MentionsEmotionsLinksUITests.swift */; };
+		0287516820534AC60038EA13 /* Atlassian.png in Resources */ = {isa = PBXBuildFile; fileRef = 0287516620534AC60038EA13 /* Atlassian.png */; };
+		0287516920534AC60038EA13 /* hipchat.png in Resources */ = {isa = PBXBuildFile; fileRef = 0287516720534AC60038EA13 /* hipchat.png */; };
+		0287516B20534B8A0038EA13 /* Atl2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0287516A20534B8A0038EA13 /* Atl2.png */; };
+		0287516E20536DDF0038EA13 /* ViewController+UITextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0287516D20536DDF0038EA13 /* ViewController+UITextViewDelegate.swift */; };
+		0287517020536F120038EA13 /* ViewController+KeyboardNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0287516F20536F120038EA13 /* ViewController+KeyboardNotifications.swift */; };
+		0287517220536FDA0038EA13 /* ViewController+TextViewScrollWithKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0287517120536FDA0038EA13 /* ViewController+TextViewScrollWithKeyboard.swift */; };
+		02875177205374710038EA13 /* MentionsEmotionsLinks+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02875176205374710038EA13 /* MentionsEmotionsLinks+Protocol.swift */; };
+		02875179205375DF0038EA13 /* MentionsEmotionsLinksType+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02875178205375DF0038EA13 /* MentionsEmotionsLinksType+Extension.swift */; };
+		0287517B205376C50038EA13 /* MentionsEmotionsLinksUIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0287517A205376C50038EA13 /* MentionsEmotionsLinksUIElements.swift */; };
 		AFB83294FBDCB98FBE9EF47D /* Pods_MentionsEmotionsLinksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A0BC485FF256A2272294BB /* Pods_MentionsEmotionsLinksTests.framework */; };
 		D5642EFCE82236CBB4579476 /* Pods_MentionsEmotionsLinksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F252BA6B13B1B41CC18EF323 /* Pods_MentionsEmotionsLinksUITests.framework */; };
 		E837C1588AFBE61B924B562D /* Pods_MentionsEmotionsLinks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 588EE9B377893A0F49C7E409 /* Pods_MentionsEmotionsLinks.framework */; };
@@ -50,6 +59,15 @@
 		0287515320533E310038EA13 /* MentionsEmotionsLinksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MentionsEmotionsLinksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0287515720533E310038EA13 /* MentionsEmotionsLinksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentionsEmotionsLinksUITests.swift; sourceTree = "<group>"; };
 		0287515920533E310038EA13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0287516620534AC60038EA13 /* Atlassian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Atlassian.png; sourceTree = "<group>"; };
+		0287516720534AC60038EA13 /* hipchat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hipchat.png; sourceTree = "<group>"; };
+		0287516A20534B8A0038EA13 /* Atl2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Atl2.png; sourceTree = "<group>"; };
+		0287516D20536DDF0038EA13 /* ViewController+UITextViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+UITextViewDelegate.swift"; sourceTree = "<group>"; };
+		0287516F20536F120038EA13 /* ViewController+KeyboardNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+KeyboardNotifications.swift"; sourceTree = "<group>"; };
+		0287517120536FDA0038EA13 /* ViewController+TextViewScrollWithKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+TextViewScrollWithKeyboard.swift"; sourceTree = "<group>"; };
+		02875176205374710038EA13 /* MentionsEmotionsLinks+Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MentionsEmotionsLinks+Protocol.swift"; sourceTree = "<group>"; };
+		02875178205375DF0038EA13 /* MentionsEmotionsLinksType+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MentionsEmotionsLinksType+Extension.swift"; sourceTree = "<group>"; };
+		0287517A205376C50038EA13 /* MentionsEmotionsLinksUIElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentionsEmotionsLinksUIElements.swift; sourceTree = "<group>"; };
 		3D1EBE9528A0C58552E82DDC /* Pods-MentionsEmotionsLinksUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MentionsEmotionsLinksUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MentionsEmotionsLinksUITests/Pods-MentionsEmotionsLinksUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3EE15CAC89802FD03B9F1BD3 /* Pods-MentionsEmotionsLinksUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MentionsEmotionsLinksUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MentionsEmotionsLinksUITests/Pods-MentionsEmotionsLinksUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		588EE9B377893A0F49C7E409 /* Pods_MentionsEmotionsLinks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MentionsEmotionsLinks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +132,8 @@
 		0287513620533E310038EA13 /* MentionsEmotionsLinks */ = {
 			isa = PBXGroup;
 			children = (
+				0287516C205365830038EA13 /* Extensions */,
+				0287516520534AC60038EA13 /* Images */,
 				0287513720533E310038EA13 /* AppDelegate.swift */,
 				0287513920533E310038EA13 /* ViewController.swift */,
 				0287513B20533E310038EA13 /* Main.storyboard */,
@@ -136,10 +156,41 @@
 		0287515620533E310038EA13 /* MentionsEmotionsLinksUITests */ = {
 			isa = PBXGroup;
 			children = (
-				0287515720533E310038EA13 /* MentionsEmotionsLinksUITests.swift */,
+				02875173205373760038EA13 /* Message */,
 				0287515920533E310038EA13 /* Info.plist */,
 			);
 			path = MentionsEmotionsLinksUITests;
+			sourceTree = "<group>";
+		};
+		0287516520534AC60038EA13 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				0287516A20534B8A0038EA13 /* Atl2.png */,
+				0287516620534AC60038EA13 /* Atlassian.png */,
+				0287516720534AC60038EA13 /* hipchat.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		0287516C205365830038EA13 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0287516D20536DDF0038EA13 /* ViewController+UITextViewDelegate.swift */,
+				0287516F20536F120038EA13 /* ViewController+KeyboardNotifications.swift */,
+				0287517120536FDA0038EA13 /* ViewController+TextViewScrollWithKeyboard.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		02875173205373760038EA13 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				02875176205374710038EA13 /* MentionsEmotionsLinks+Protocol.swift */,
+				0287515720533E310038EA13 /* MentionsEmotionsLinksUITests.swift */,
+				02875178205375DF0038EA13 /* MentionsEmotionsLinksType+Extension.swift */,
+				0287517A205376C50038EA13 /* MentionsEmotionsLinksUIElements.swift */,
+			);
+			path = Message;
 			sourceTree = "<group>";
 		};
 		36363864EC60401D54650121 /* Frameworks */ = {
@@ -281,6 +332,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0287516B20534B8A0038EA13 /* Atl2.png in Resources */,
+				0287516920534AC60038EA13 /* hipchat.png in Resources */,
+				0287516820534AC60038EA13 /* Atlassian.png in Resources */,
 				0287514220533E310038EA13 /* LaunchScreen.storyboard in Resources */,
 				0287513F20533E310038EA13 /* Assets.xcassets in Resources */,
 				0287513D20533E310038EA13 /* Main.storyboard in Resources */,
@@ -447,7 +501,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0287513A20533E310038EA13 /* ViewController.swift in Sources */,
+				0287516E20536DDF0038EA13 /* ViewController+UITextViewDelegate.swift in Sources */,
+				0287517020536F120038EA13 /* ViewController+KeyboardNotifications.swift in Sources */,
 				0287513820533E310038EA13 /* AppDelegate.swift in Sources */,
+				0287517220536FDA0038EA13 /* ViewController+TextViewScrollWithKeyboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,7 +520,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02875177205374710038EA13 /* MentionsEmotionsLinks+Protocol.swift in Sources */,
 				0287515820533E310038EA13 /* MentionsEmotionsLinksUITests.swift in Sources */,
+				02875179205375DF0038EA13 /* MentionsEmotionsLinksType+Extension.swift in Sources */,
+				0287517B205376C50038EA13 /* MentionsEmotionsLinksUIElements.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,6 +677,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4CY9HM7GKY;
 				INFOPLIST_FILE = MentionsEmotionsLinks/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Home.MentionsEmotionsLinks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -633,6 +694,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4CY9HM7GKY;
 				INFOPLIST_FILE = MentionsEmotionsLinks/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Home.MentionsEmotionsLinks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
