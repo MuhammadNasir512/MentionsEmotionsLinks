@@ -9,6 +9,7 @@
 import XCTest
 
 enum MentionsEmotionsLinksUIElements {
-    static let inputTextFieldAccessibilityId = XCUIApplication().textViews["input_text_field"]
-    static let outputTextFieldAccessibilityId = XCUIApplication().textViews["output_text_field"]
+    static let inputTextField = XCUIApplication().textViews["input_text_field"]
+    static let outputTextField = XCUIApplication().textViews["output_text_field"]
+    static let keyboardReturnButton = XCUIApplication().keyboards.buttons["return"]
 }

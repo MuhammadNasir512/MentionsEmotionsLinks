@@ -15,17 +15,33 @@ class MentionsEmotionsLinksUITests: XCTestCase, MentionsEmotionsLinksType {
         continueAfterFailure = false
     }
     
-    override func tearDown() {
-        super.tearDown()
-    }
-    
     func testMainViewHasInputTextView() {
         whenTheAppIsLaunched()
-        thenInputTextViewMustBeAvaiable()
+        // Then
+        inputTextViewMustBeAvaiable()
     }
     
     func testMainViewHasOutputTextView() {
         whenTheAppIsLaunched()
-        thenOutputTextViewMustBeAvaiable()
+        // Then
+        outputTextViewMustBeAvaiable()
+    }
+    
+    func testKeyboardShowsAndHidesWithUserInteractions() {
+        whenTheAppIsLaunched()
+        // Then
+        inputTextViewMustBeAvaiable()
+        
+        // And When
+        inputTextViewIsTapped()
+        // Then
+        keyboardShowsUpToInputText()
+        // And
+        returnKeyOnKeyboardMustExist()
+        
+        // And When
+        returnKeyTappedFromKeyboard()
+        // Then
+        keyboardMustGoAway()
     }
 }

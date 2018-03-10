@@ -10,5 +10,6 @@ protocol MentionsEmotionsLinksType {
     
     func testMainViewHasInputTextView()
     func testMainViewHasOutputTextView()
+    func testKeyboardShowsAndHidesWithUserInteractions()
 }
 

@@ -15,11 +15,33 @@ extension MentionsEmotionsLinksType {
         XCUIApplication().launch()
     }
     
-    func thenInputTextViewMustBeAvaiable() {
-        XCTAssertTrue(MentionsEmotionsLinksUIElements.inputTextFieldAccessibilityId.exists)
+    func inputTextViewMustBeAvaiable() {
+        XCTAssertTrue(MentionsEmotionsLinksUIElements.inputTextField.exists)
     }
     
-    func thenOutputTextViewMustBeAvaiable() {
-        XCTAssertTrue(MentionsEmotionsLinksUIElements.outputTextFieldAccessibilityId.exists)
+    func outputTextViewMustBeAvaiable() {
+        XCTAssertTrue(MentionsEmotionsLinksUIElements.outputTextField.exists)
+    }
+    
+    func returnKeyOnKeyboardMustExist() {
+        XCTAssertTrue(MentionsEmotionsLinksUIElements.keyboardReturnButton.exists)
+    }
+
+    func keyboardShowsUpToInputText() {
+        XCTAssertTrue(XCUIApplication().keyboards.count > 0)
+    }
+    
+    func keyboardMustGoAway() {
+        XCTAssertTrue(XCUIApplication().keyboards.count == 0)
+    }
+    
+    func inputTextViewIsTapped() {
+        let element = MentionsEmotionsLinksUIElements.inputTextField
+        element.tap()
+    }
+    
+    func returnKeyTappedFromKeyboard() {
+        let element = MentionsEmotionsLinksUIElements.keyboardReturnButton
+        element.tap()
     }
 }
