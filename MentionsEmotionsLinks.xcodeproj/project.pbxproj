@@ -34,6 +34,9 @@
 		02875190205476F90038EA13 /* ViewController+ProcessUserInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0287518F205476F90038EA13 /* ViewController+ProcessUserInput.swift */; };
 		0287519520549B760038EA13 /* LinksProcessor+LinksExtraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0287519420549B760038EA13 /* LinksProcessor+LinksExtraction.swift */; };
 		028751972054A9B90038EA13 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 028751962054A9B90038EA13 /* NetworkExtension.framework */; };
+		02E85F2B205579DC003BB305 /* LinksProcessorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E85F2A205579DC003BB305 /* LinksProcessorTests.swift */; };
+		02E85F2D20559849003BB305 /* JSONUtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E85F2C20559849003BB305 /* JSONUtilityTests.swift */; };
+		02E85F302055988C003BB305 /* SwiftLinkPreviewFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E85F2F2055988C003BB305 /* SwiftLinkPreviewFake.swift */; };
 		AFB83294FBDCB98FBE9EF47D /* Pods_MentionsEmotionsLinksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A0BC485FF256A2272294BB /* Pods_MentionsEmotionsLinksTests.framework */; };
 		D5642EFCE82236CBB4579476 /* Pods_MentionsEmotionsLinksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F252BA6B13B1B41CC18EF323 /* Pods_MentionsEmotionsLinksUITests.framework */; };
 		E837C1588AFBE61B924B562D /* Pods_MentionsEmotionsLinks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 588EE9B377893A0F49C7E409 /* Pods_MentionsEmotionsLinks.framework */; };
@@ -89,6 +92,9 @@
 		0287519420549B760038EA13 /* LinksProcessor+LinksExtraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LinksProcessor+LinksExtraction.swift"; sourceTree = "<group>"; };
 		028751962054A9B90038EA13 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 		028751982054A9BA0038EA13 /* MentionsEmotionsLinks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MentionsEmotionsLinks.entitlements; sourceTree = "<group>"; };
+		02E85F2A205579DC003BB305 /* LinksProcessorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksProcessorTests.swift; sourceTree = "<group>"; };
+		02E85F2C20559849003BB305 /* JSONUtilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONUtilityTests.swift; sourceTree = "<group>"; };
+		02E85F2F2055988C003BB305 /* SwiftLinkPreviewFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLinkPreviewFake.swift; sourceTree = "<group>"; };
 		3D1EBE9528A0C58552E82DDC /* Pods-MentionsEmotionsLinksUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MentionsEmotionsLinksUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MentionsEmotionsLinksUITests/Pods-MentionsEmotionsLinksUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3EE15CAC89802FD03B9F1BD3 /* Pods-MentionsEmotionsLinksUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MentionsEmotionsLinksUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MentionsEmotionsLinksUITests/Pods-MentionsEmotionsLinksUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		588EE9B377893A0F49C7E409 /* Pods_MentionsEmotionsLinks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MentionsEmotionsLinks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,8 +178,11 @@
 		0287514B20533E310038EA13 /* MentionsEmotionsLinksTests */ = {
 			isa = PBXGroup;
 			children = (
+				02E85F2E2055986D003BB305 /* Fakes */,
 				0287514E20533E310038EA13 /* Info.plist */,
 				0287518320543B2E0038EA13 /* MentionsProcessorTests.swift */,
+				02E85F2A205579DC003BB305 /* LinksProcessorTests.swift */,
+				02E85F2C20559849003BB305 /* JSONUtilityTests.swift */,
 			);
 			path = MentionsEmotionsLinksTests;
 			sourceTree = "<group>";
@@ -230,6 +239,14 @@
 				0287518720544A280038EA13 /* JSONUtility.swift */,
 			);
 			path = TextProcessors;
+			sourceTree = "<group>";
+		};
+		02E85F2E2055986D003BB305 /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+				02E85F2F2055988C003BB305 /* SwiftLinkPreviewFake.swift */,
+			);
+			path = Fakes;
 			sourceTree = "<group>";
 		};
 		36363864EC60401D54650121 /* Frameworks */ = {
@@ -566,6 +583,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0287518420543B2E0038EA13 /* MentionsProcessorTests.swift in Sources */,
+				02E85F302055988C003BB305 /* SwiftLinkPreviewFake.swift in Sources */,
+				02E85F2B205579DC003BB305 /* LinksProcessorTests.swift in Sources */,
+				02E85F2D20559849003BB305 /* JSONUtilityTests.swift in Sources */,
 				0287518B205463B40038EA13 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

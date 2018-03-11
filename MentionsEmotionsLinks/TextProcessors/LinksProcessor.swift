@@ -14,7 +14,7 @@ class LinksProcessor: NSObject, LinksProcessorType {
     var text = ""
     private var linkStrings = [String]()
     private var linkTouples = [(String, String)]()
-    private let linkPreview = SwiftLinkPreview()
+    var linkPreview = SwiftLinkPreview()
 
     required init(withText newText: String) {
         super.init()
@@ -33,14 +33,13 @@ class LinksProcessor: NSObject, LinksProcessorType {
             return
         }
         let linkString = linkStrings.remove(at: 0)
-        linkPreview.preview(linkString, onSuccess: { (response) in
-            
-            let linkTitle = response[SwiftLinkResponseKey.description] as? String ?? ""
+        
+        linkPreview.previewLink(linkString, onSuccess: { (linksDictionary) in
+            let linkTitle = linksDictionary[Constants.LinkPreviewResponseKeys.description] as? String ?? ""
             let linkTouple = (linkString, linkTitle)
             self.linkTouples.append(linkTouple)
             self.loadNextLinkTitle(completion)
-            
-        }) { (previewError) in
+        }) { (error: NSError) in
             print("Error")
         }
     }
