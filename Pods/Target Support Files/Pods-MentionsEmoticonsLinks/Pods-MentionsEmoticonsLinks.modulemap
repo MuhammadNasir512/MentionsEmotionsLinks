@@ -1,0 +1,6 @@
+framework module Pods_MentionsEmoticonsLinks {
+  umbrella header "Pods-MentionsEmoticonsLinks-umbrella.h"
+
+  export *
+  module * { export * }
+}
