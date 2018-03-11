@@ -7,33 +7,29 @@
 //
 
 import UIKit
-import WebKit
 
 class ViewController: UIViewController {
     
-    let webView = WKWebView()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        webView.addObserver(self, forKeyPath: "title", options: .new, context: nil)
-    }
-    deinit {
-        webView.removeObserver(self, forKeyPath: "title")
-    }
-
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     @IBOutlet weak var textViewForInput: UITextView!
     @IBOutlet weak var textViewForOutput: UITextView!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
 
     var inputProcessorType: InputProcessorType?
     var jsonUtility = JSONUtility()
     
     var originalBottomConstant: CGFloat = 0
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        hideActivityIndicator()
+        setupTextView()
+        setupActivityIndicatorView()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        setupTextView()
         registerKeyboardNotifications()
     }
     
@@ -54,10 +50,14 @@ class ViewController: UIViewController {
     }
     
     func userDidFinishEnteringText(_ text: String) {
+        showActivityIndicator()
         processInput(text)
     }
     
     func updateOutputTextView(withJsonFormattedText jsonFormattedText: String, originalText: String) {
+        
+        hideActivityIndicator()
+
         if (originalText.count == 0) {
             textViewForOutput.text = Constants.noInputTextMessageForOutputTextView
             return
@@ -70,5 +70,28 @@ class ViewController: UIViewController {
         }
         textViewForOutput.text = "\(string)\(jsonFormattedText)"
         print("JSONString:\n\(string)\(jsonFormattedText)")
+    }
+}
+
+extension ViewController {
+    
+    func setupActivityIndicatorView() {
+        guard let superView = activityIndicatorView.superview else { return }
+        superView.layer.cornerRadius = superView.bounds.size.height / 2.0
+        activityIndicatorView.activityIndicatorViewStyle = .whiteLarge
+    }
+    
+    func showActivityIndicator() {
+        guard let superView = activityIndicatorView.superview else { return }
+        superView.superview?.isUserInteractionEnabled = false
+        superView.isHidden = false
+        activityIndicatorView.startAnimating()
+    }
+    
+    func hideActivityIndicator() {
+        guard let superView = activityIndicatorView.superview else { return }
+        superView.superview?.isUserInteractionEnabled = true
+        superView.isHidden = true
+        activityIndicatorView.stopAnimating()
     }
 }
