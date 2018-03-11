@@ -1,12 +1,15 @@
 PODS:
+  - SwiftLinkPreview (2.2.0)
   - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
+  - SwiftLinkPreview (= 2.2.0)
   - SwiftyJSON (= 4.0.0)
 
 SPEC CHECKSUMS:
+  SwiftLinkPreview: ba2ec1f15a5309eb49aeabe7e20718162406aab2
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 7c7c41c6d94cbf8c79d8a7e93ffe00f4a10e6125
+PODFILE CHECKSUM: b8c57176cca68cab06b0aec26afdf8bfa525957c
 
 COCOAPODS: 1.2.0

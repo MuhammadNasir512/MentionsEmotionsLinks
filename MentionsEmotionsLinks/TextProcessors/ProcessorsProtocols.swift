@@ -18,3 +18,8 @@ protocol TextProcessorType: InputProcessorType {
 
 protocol MentionsProcessorType: TextProcessorType {}
 
+protocol LinksProcessorType {
+    init(withText newText: String)
+    func processData(_ completion: @escaping ([Any]) -> (Void))
+}
+
