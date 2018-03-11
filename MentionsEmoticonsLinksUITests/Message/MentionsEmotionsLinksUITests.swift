@@ -83,5 +83,17 @@ class MentionsEmoticonsLinksUITests: XCTestCase, MentionsEmoticonsLinksType {
         // Then
         expectThatOutputFieldShowsMentionsFound(textToInput)
     }
-
+    
+    func testWhenUserHaveEnteredAnyEmoticonsThenItShownInOutputTextView() {
+        let textToInput = "chris (allthethings) you around? (areyoukiddingme), bob, (zoidberg)"
+        whenTheAppIsLaunched()
+        // Then
+        inputTextViewIsTapped()
+        // And Then
+        typeTextInInputTextView(textToInput)
+        // And When
+        returnKeyTappedFromKeyboard()
+        // Then
+        expectThatOutputFieldShowsEmoticonsFound(textToInput)
+    }
 }

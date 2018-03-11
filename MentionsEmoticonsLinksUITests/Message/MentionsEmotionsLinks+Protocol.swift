@@ -14,5 +14,6 @@ protocol MentionsEmoticonsLinksType {
     func testWhenUserHaveEnteredNothinThenProperMessageShowsInOutputTextView()
     func testWhenUserHaveEnteredPlainTextThenProperMessageShowsInOutputTextView()
     func testWhenUserHaveEnteredAnyMentionsThenItShownInOutputTextView()
+    func testWhenUserHaveEnteredAnyEmoticonsThenItShownInOutputTextView()
 }
 
