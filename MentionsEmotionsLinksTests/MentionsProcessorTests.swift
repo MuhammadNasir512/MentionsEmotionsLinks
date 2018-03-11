@@ -27,13 +27,13 @@ class MentionsProcessorTests: XCTestCase {
     
     func testWhenStringWithMentionsIsProvided_thenItReturnsNonEmptyArray() {
         let mentionsProcessor = MentionsProcessor(withText: "@chris you around?")
-        var resultUnderTest = mentionsProcessor.processData() as! [String]
+        var resultUnderTest = mentionsProcessor.processData()
         XCTAssertNotNil(resultUnderTest)
         XCTAssertTrue(resultUnderTest.count == 1)
         XCTAssertTrue(resultUnderTest[0] == "chris")
         
         mentionsProcessor.text = "@chris you around? and how are @mike, @bob, @kate, @sam are doing"
-        resultUnderTest = mentionsProcessor.processData() as! [String]
+        resultUnderTest = mentionsProcessor.processData()
         XCTAssertTrue(resultUnderTest.count == 5)
         XCTAssertTrue(resultUnderTest.contains("chris"))
         XCTAssertTrue(resultUnderTest.contains("mike"))

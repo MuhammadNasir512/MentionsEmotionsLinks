@@ -8,15 +8,11 @@
 
 import Foundation
 
-class InputProcessor: NSObject, TextProcessorType {
+class InputProcessor: NSObject {
     var text = ""
     
     required init(withText newText: String) {
         text = newText
         super.init()
-    }
-    
-    func processData() -> [Any] {
-        return ["InputProcessor"]
     }
 }

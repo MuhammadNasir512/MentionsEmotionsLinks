@@ -12,7 +12,7 @@ class MentionsProcessor: InputProcessor, MentionsProcessorType {
     
     private let regex = "^@([A-Za-z0-9_]+)|\\s([@#][\\w_-]+)"
     
-    override func processData() -> [Any] {
+    func processData() -> [String] {
         let mentions = findMentions(withRegex: regex, in: text)
         let formattedMentions = removeAtSignFrom(mentions)
         return formattedMentions

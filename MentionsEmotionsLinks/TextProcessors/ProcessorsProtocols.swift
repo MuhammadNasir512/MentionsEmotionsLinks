@@ -8,15 +8,12 @@
 
 import Foundation
 
-protocol InputProcessorType {
-}
-
-protocol TextProcessorType: InputProcessorType {
+protocol TextProcessorType {
     init(withText newText: String)
 }
 
 protocol MentionsProcessorType: TextProcessorType {
-    func processData() -> [Any]
+    func processData() -> [String]
 }
 protocol EmotionsProcessorType: TextProcessorType {
     func processData() -> [Any]

@@ -21,7 +21,7 @@ extension ViewController {
     
     private func processMentions(_ text: String) -> [String] {
         let mentionsProcessor = MentionsProcessor(withText: text)
-        guard let mentionsArray = mentionsProcessor.processData() as? [String] else { return [] }
+        let mentionsArray = mentionsProcessor.processData()
         return mentionsArray
     }
     
