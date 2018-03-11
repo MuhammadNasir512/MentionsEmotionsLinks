@@ -11,18 +11,27 @@ import SwiftyJSON
 
 struct JSONKeys {
     static let mentionsKey = "mentions"
+    static let emotionsKey = "emotions"
     static let linksKey = "links"
     static let linksTitleKey = "title"
     static let linksUrlKey = "url"
 }
 class JSONUtility: NSObject {
     
-    func JsonFormattedString(withMentions mentions: [String], withLinks links: [(String, String)]) -> String {
+    func JsonFormattedString(
+        withMentions mentions: [String],
+        withEmotions emotions: [String],
+        withLinks links: [(String, String)]
+        ) -> String {
         
         var outputDictionary = [String : Any]()
         
         if mentions.count > 0 {
             outputDictionary[JSONKeys.mentionsKey] = mentions
+        }
+        
+        if emotions.count > 0 {
+            outputDictionary[JSONKeys.emotionsKey] = emotions
         }
         
         let linksJson = linksDictionaryArray(withLinks: links)

@@ -19,6 +19,16 @@ struct Constants {
     struct LinkPreviewResponseKeys {
         static let description = "description"
     }
+    
+    static let emoticons = [
+        "allthethings",
+        "android",
+        "areyoukiddingme",
+        "arrington",
+        "arya",
+        "ashton",
+        "zoidberg"
+    ]
 }
 
 
