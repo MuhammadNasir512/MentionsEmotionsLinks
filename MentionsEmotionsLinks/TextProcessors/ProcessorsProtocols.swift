@@ -9,17 +9,13 @@
 import Foundation
 
 protocol TextProcessorType {
-    init(withText newText: String)
-}
-
-protocol MentionsProcessorType: TextProcessorType {
     func processData() -> [String]
 }
-protocol EmotionsProcessorType: TextProcessorType {
-    func processData() -> [Any]
-}
 
-protocol LinksProcessorType: TextProcessorType {
+protocol MentionsProcessorType: TextProcessorType {}
+protocol EmotionsProcessorType: TextProcessorType {}
+
+protocol LinksProcessorType {
     func processData(_ completion: @escaping ([Any]) -> (Void))
 }
 

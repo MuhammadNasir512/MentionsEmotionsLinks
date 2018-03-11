@@ -9,17 +9,11 @@
 import Foundation
 import SwiftLinkPreview
 
-class LinksProcessor: NSObject, LinksProcessorType {
+class LinksProcessor: InputProcessor, LinksProcessorType {
     
-    var text = ""
     private var linkStrings = [String]()
     private var linkTouples = [(String, String)]()
     var linkPreview = SwiftLinkPreview()
-
-    required init(withText newText: String) {
-        super.init()
-        text = newText
-    }
     
     func processData(_ completion: @escaping ([Any]) -> (Void)) {
         linkStrings = extractUrlStrings(from: text)
