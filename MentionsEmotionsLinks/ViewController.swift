@@ -16,9 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var textViewForOutput: UITextView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
 
-    var inputProcessorType: InputProcessorType?
     var jsonUtility = JSONUtility()
-    
     var originalBottomConstant: CGFloat = 0
     
     override func viewDidLoad() {

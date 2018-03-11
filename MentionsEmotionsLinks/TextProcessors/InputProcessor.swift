@@ -8,7 +8,7 @@
 
 import Foundation
 
-class InputProcessor: NSObject, InputProcessorType {
+class InputProcessor: NSObject, TextProcessorType {
     var text = ""
     
     required init(withText newText: String) {

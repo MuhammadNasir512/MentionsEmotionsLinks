@@ -20,12 +20,8 @@ extension ViewController {
     }
     
     private func processMentions(_ text: String) -> [String] {
-        inputProcessorType = MentionsProcessor(withText: text) as MentionsProcessor
-        guard
-            let inputProcessorType = inputProcessorType,
-            let mentionsArray = inputProcessorType.processData() as? [String]
-            else { return [] }
-        
+        let mentionsProcessor = MentionsProcessor(withText: text)
+        guard let mentionsArray = mentionsProcessor.processData() as? [String] else { return [] }
         return mentionsArray
     }
     
