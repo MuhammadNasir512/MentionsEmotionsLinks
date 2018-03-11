@@ -70,4 +70,11 @@ extension MentionsEmoticonsLinksType {
         let actualValue = MentionsEmoticonsLinksUIElements.outputTextField.value as? String
         XCTAssert(actualValue == expectedValue)
     }
+    
+    func expectThatOutputFieldShowsEmoticonsFound(_ originalText: String) {
+        let expectedValue = "Input: chris (allthethings) you around? (areyoukiddingme), bob, (zoidberg)\n\n{\n  \"emoticons\" : [\n    \"allthethings\",\n    \"areyoukiddingme\",\n    \"zoidberg\"\n  ]\n}"
+        
+        let actualValue = MentionsEmoticonsLinksUIElements.outputTextField.value as? String
+        XCTAssert(actualValue == expectedValue)
+    }
 }
