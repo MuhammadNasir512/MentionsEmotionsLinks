@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0920"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "49C154FFF396029A783178622B9EF6DE"
+               BlueprintIdentifier = "2E711305B763DAB2D8BBACDDD853F202"
                BuildableName = "Pods_MentionsEmotionsLinks.framework"
                BlueprintName = "Pods-MentionsEmotionsLinks"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "49C154FFF396029A783178622B9EF6DE"
+            BlueprintIdentifier = "2E711305B763DAB2D8BBACDDD853F202"
             BuildableName = "Pods_MentionsEmotionsLinks.framework"
             BlueprintName = "Pods-MentionsEmotionsLinks"
             ReferencedContainer = "container:Pods.xcodeproj">

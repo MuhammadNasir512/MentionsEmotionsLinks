@@ -24,35 +24,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pPj-cf-8ab">
-                                <rect key="frame" x="20" y="607" width="335" height="40"/>
+                                <rect key="frame" x="5" y="622" width="365" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" identifier="input_text_field"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="CtS-Gh-3l6"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" smartInsertDeleteType="no" smartQuotesType="no"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Rt7-hZ-hMt"/>
                                 </connections>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKB-HP-B73">
-                                <rect key="frame" x="20" y="84" width="335" height="503"/>
+                                <rect key="frame" x="5" y="69" width="365" height="548"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" identifier="output_text_field"/>
-                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="0.95445096492767334" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="QKB-HP-B73" firstAttribute="bottom" secondItem="pPj-cf-8ab" secondAttribute="top" constant="-20" id="MRJ-cK-TrY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pPj-cf-8ab" secondAttribute="trailing" constant="20" id="RpK-vv-xuA"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QKB-HP-B73" secondAttribute="trailing" constant="20" id="SwC-jM-a75"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pPj-cf-8ab" secondAttribute="bottom" constant="20" id="VKa-mG-x5h"/>
-                            <constraint firstItem="pPj-cf-8ab" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="VPp-OT-rJ5"/>
-                            <constraint firstItem="QKB-HP-B73" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="ZUa-E1-jf7"/>
-                            <constraint firstItem="QKB-HP-B73" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bNu-Rg-qMv"/>
+                            <constraint firstItem="QKB-HP-B73" firstAttribute="bottom" secondItem="pPj-cf-8ab" secondAttribute="top" constant="-5" id="MRJ-cK-TrY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pPj-cf-8ab" secondAttribute="trailing" constant="5" id="RpK-vv-xuA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QKB-HP-B73" secondAttribute="trailing" constant="5" id="SwC-jM-a75"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pPj-cf-8ab" secondAttribute="bottom" constant="5" id="VKa-mG-x5h"/>
+                            <constraint firstItem="pPj-cf-8ab" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="VPp-OT-rJ5"/>
+                            <constraint firstItem="QKB-HP-B73" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="ZUa-E1-jf7"/>
+                            <constraint firstItem="QKB-HP-B73" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="bNu-Rg-qMv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

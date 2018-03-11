@@ -7,8 +7,19 @@
 //
 
 import UIKit
+import WebKit
 
 class ViewController: UIViewController {
+    
+    let webView = WKWebView()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        webView.addObserver(self, forKeyPath: "title", options: .new, context: nil)
+    }
+    deinit {
+        webView.removeObserver(self, forKeyPath: "title")
+    }
 
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
@@ -19,7 +30,7 @@ class ViewController: UIViewController {
     var jsonUtility = JSONUtility()
     
     var originalBottomConstant: CGFloat = 0
-
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setupTextView()
@@ -46,23 +57,7 @@ class ViewController: UIViewController {
         processInput(text)
     }
     
-    private func processInput(_ text: String) {
-        let mentions = processMentions(text)
-        let jsonFormattedString = jsonUtility.JsonFormattedString(withArray: mentions)
-        updateOutputTextView(withJsonFormattedText: jsonFormattedString, originalText: text)
-    }
-    
-    private func processMentions(_ text: String) -> [String] {
-        inputProcessorType = MentionsProcessor(withText: text) as MentionsProcessor
-        guard
-            let inputProcessorType = inputProcessorType,
-            let mentionsArray = inputProcessorType.processData() as? [String]
-            else { return [] }
-        
-        return mentionsArray
-    }
-
-    private func updateOutputTextView(withJsonFormattedText jsonFormattedText: String, originalText: String) {
+    func updateOutputTextView(withJsonFormattedText jsonFormattedText: String, originalText: String) {
         if (originalText.count == 0) {
             textViewForOutput.text = Constants.noInputTextMessageForOutputTextView
             return
@@ -74,7 +69,6 @@ class ViewController: UIViewController {
             return
         }
         textViewForOutput.text = "\(string)\(jsonFormattedText)"
+        print("JSONString:\n\(string)\(jsonFormattedText)")
     }
 }
-
-

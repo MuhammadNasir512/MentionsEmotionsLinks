@@ -4,6 +4,7 @@ target 'MentionsEmotionsLinks' do
     use_frameworks!
 
     pod 'SwiftyJSON', "4.0.0"
+    pod 'SwiftLinkPreview', "2.2.0"
 
     target 'MentionsEmotionsLinksTests' do
         inherit! :search_paths

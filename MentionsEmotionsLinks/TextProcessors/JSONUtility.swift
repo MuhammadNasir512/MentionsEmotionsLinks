@@ -11,20 +11,47 @@ import SwiftyJSON
 
 struct JSONKeys {
     static let mentionsKey = "mentions"
+    static let linksKey = "links"
+    static let linksTitleKey = "title"
+    static let linksUrlKey = "url"
 }
 class JSONUtility: NSObject {
     
-    func JsonFormattedString(withArray array: [String]) -> String {
+    func JsonFormattedString(withMentions mentions: [String], withLinks links: [(String, String)]) -> String {
         
-        let jsonOutput: JSON = JSON([JSONKeys.mentionsKey: array])
-        guard array.count > 0, let jsonString = jsonOutput.rawString() else { return "" }
-        return jsonString
+        var outputDictionary = [String : Any]()
+        
+        if mentions.count > 0 {
+            outputDictionary[JSONKeys.mentionsKey] = mentions
+        }
+        
+        let linksJson = linksDictionaryArray(withLinks: links)
+        if linksJson.count > 0 {
+            outputDictionary[JSONKeys.linksKey] = linksJson
+        }
+        
+        if (outputDictionary.count == 0) {
+            return ""
+        }
+        
+        let json = JSON(outputDictionary)
+        let jsonString = json.rawString() ?? ""
+        return escapeForwardSlashes(fromString: jsonString)
     }
     
-    func appendMentions(_ mentions: [String], inJson existingJson: JSON) {
-        
+    private func linksDictionaryArray(withLinks links: [(String, String)]) -> [[String: String]] {
+        var linksArray = [[String: String]]()
+        for oneLinkTouple in links {
+            let linkDictionary = [
+                JSONKeys.linksUrlKey: oneLinkTouple.0,
+                JSONKeys.linksTitleKey: oneLinkTouple.1
+            ]
+            linksArray.append(linkDictionary)
+        }
+        return linksArray
     }
-    func appendJsonObject(_ newJson: JSON, inJson existingJson: JSON) {
-        
+    
+    private func escapeForwardSlashes(fromString string: String) -> String {
+        return string.replacingOccurrences(of: "\\", with: "", options: NSString.CompareOptions.literal, range:nil)
     }
 }

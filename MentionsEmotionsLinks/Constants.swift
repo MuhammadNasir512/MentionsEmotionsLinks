@@ -15,4 +15,10 @@ struct Constants {
     static let outputValueHeadingForOutputTextView = "Output:"
     static let noInputTextMessageForOutputTextView = "No input provided!"
     static let noSpecialStringForOutputTextView = "There was not any emotion, mention or link provided!"
+    
+    struct LinkPreviewResponseKeys {
+        static let description = "description"
+    }
 }
+
+
