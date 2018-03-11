@@ -13,16 +13,21 @@ extension ViewController {
     func processInput(_ text: String) {
         processLinks(text) { (linksArray) -> (Void) in
             let mentions = self.processMentions(text)
+            let emotions = self.processEmotions(text)
             let links = linksArray as? [(String, String)] ?? [("", "")]
-            let jsonFormattedString = self.jsonUtility.JsonFormattedString(withMentions: mentions, withLinks: links)
+            let jsonFormattedString = self.jsonUtility.JsonFormattedString(withMentions: mentions, withEmotions: emotions, withLinks: links)
             self.updateOutputTextView(withJsonFormattedText: jsonFormattedString, originalText: text)
         }
     }
     
     private func processMentions(_ text: String) -> [String] {
-        let mentionsProcessor = MentionsProcessor(withText: text)
-        let mentionsArray = mentionsProcessor.processData()
-        return mentionsArray
+        let processor = MentionsProcessor(withText: text)
+        return processor.processData()
+    }
+    
+    private func processEmotions(_ text: String) -> [String] {
+        let processor = EmotionsProcessor(withText: text)
+        return processor.processData()
     }
     
     private func processLinks(_ text: String, completion: @escaping (([Any]) -> (Void))) {
