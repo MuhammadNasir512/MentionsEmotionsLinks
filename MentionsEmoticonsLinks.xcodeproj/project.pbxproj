@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0038A22728CB9080358FC35E /* Pods_MentionsEmoticonsLinksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA33FCAB08EE2AC82BD28BE7 /* Pods_MentionsEmoticonsLinksUITests.framework */; };
+		021CA1222055E55E00A186B7 /* EmoticonsProcessorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021CA1212055E55E00A186B7 /* EmoticonsProcessorTests.swift */; };
 		0287513820533E310038EA13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0287513720533E310038EA13 /* AppDelegate.swift */; };
 		0287513A20533E310038EA13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0287513920533E310038EA13 /* ViewController.swift */; };
 		0287513D20533E310038EA13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0287513B20533E310038EA13 /* Main.storyboard */; };
@@ -63,6 +64,7 @@
 
 /* Begin PBXFileReference section */
 		021CA1202055DDBF00A186B7 /* MentionsEmoticonsLinks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MentionsEmoticonsLinks.entitlements; sourceTree = "<group>"; };
+		021CA1212055E55E00A186B7 /* EmoticonsProcessorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoticonsProcessorTests.swift; sourceTree = "<group>"; };
 		0287513420533E310038EA13 /* MentionsEmoticonsLinks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MentionsEmoticonsLinks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0287513720533E310038EA13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0287513920533E310038EA13 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				0287518320543B2E0038EA13 /* MentionsProcessorTests.swift */,
 				02E85F2A205579DC003BB305 /* LinksProcessorTests.swift */,
 				02E85F2C20559849003BB305 /* JSONUtilityTests.swift */,
+				021CA1212055E55E00A186B7 /* EmoticonsProcessorTests.swift */,
 			);
 			path = MentionsEmoticonsLinksTests;
 			sourceTree = "<group>";
@@ -590,6 +593,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				021CA1222055E55E00A186B7 /* EmoticonsProcessorTests.swift in Sources */,
 				0287518420543B2E0038EA13 /* MentionsProcessorTests.swift in Sources */,
 				02E85F302055988C003BB305 /* SwiftLinkPreviewFake.swift in Sources */,
 				02E85F2B205579DC003BB305 /* LinksProcessorTests.swift in Sources */,
